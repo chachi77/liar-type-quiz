@@ -90,3 +90,9 @@ export default function LiarTypeQuiz() {
     </div>
   );
 }
+<Button className={`bg-yes text-white hover:bg-selectedYes`} ...>
+  YES
+</Button>
+<Button className={`bg-no text-white hover:bg-selectedNo`} ...>
+  NO
+</Button>
