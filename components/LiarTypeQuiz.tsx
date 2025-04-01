@@ -23,14 +23,16 @@ export default function LiarTypeQuiz() {
   const [result, setResult] = useState<{ type: string; reaction: string; notice: string } | null>(null);
 
 
-  const handleSubmit = () => {
-    if (q1 && q2) {
-      setResult({
-        type: results[q1],
-        reaction: reactions[q2]
-      });
-    }
-  };
+const handleSubmit = () => {
+  if (q1 && q2) {
+    setResult({
+      type: q1,
+      reaction: reactions[q2 as keyof typeof reactions],
+      notice: results[q1 as keyof typeof results]
+    });
+  }
+};
+
 
   return (
     <div className="p-4 max-w-xl mx-auto">
