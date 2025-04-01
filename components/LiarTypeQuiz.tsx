@@ -90,9 +90,20 @@ export default function LiarTypeQuiz() {
     </div>
   );
 }
-<Button className={`bg-yes text-white hover:bg-selectedYes`} ...>
+<Button
+  className={`${
+    answer === "yes" ? "bg-selectedYes text-white" : "bg-yes text-white"
+  } px-4 py-2 rounded`}
+  onClick={() => setAnswer("yes")}
+>
   YES
 </Button>
-<Button className={`bg-no text-white hover:bg-selectedNo`} ...>
+
+<Button
+  className={`${
+    answer === "no" ? "bg-selectedNo text-white" : "bg-no text-white"
+  } px-4 py-2 rounded`}
+  onClick={() => setAnswer("no")}
+>
   NO
 </Button>
