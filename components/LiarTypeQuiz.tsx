@@ -60,13 +60,13 @@ export default function LiarTypeQuiz() {
             <p className="mb-4 font-semibold">Q{i + 1}. {text}</p>
             <div className="flex gap-4">
               <Button
-                className={`w-full px-4 py-2 rounded-xl font-medium transition-colors duration-200 border text-white ${answers[i] === "1" ? "bg-blue-400 shadow-md" : "bg-blue-600 hover:bg-blue-700"}`}
+                className={`w-full px-4 py-2 rounded-xl font-medium border text-white ${answers[i] === "1" ? "bg-selectedYes" : "bg-yes hover:bg-selectedYes"}`}
                 onClick={() => handleChange(i, "1")}
               >
                 YES
               </Button>
               <Button
-                className={`w-full px-4 py-2 rounded-xl font-medium transition-colors duration-200 border text-white ${answers[i] === "0" ? "bg-red-400 shadow-md" : "bg-red-600 hover:bg-red-700"}`}
+                className={`w-full px-4 py-2 rounded-xl font-medium border text-white ${answers[i] === "0" ? "bg-selectedNo" : "bg-no hover:bg-selectedNo"}`}
                 onClick={() => handleChange(i, "0")}
               >
                 NO
@@ -90,20 +90,3 @@ export default function LiarTypeQuiz() {
     </div>
   );
 }
-<Button
-  className={`${
-    answer === "yes" ? "bg-selectedYes text-white" : "bg-yes text-white"
-  } px-4 py-2 rounded`}
-  onClick={() => setAnswer("yes")}
->
-  YES
-</Button>
-
-<Button
-  className={`${
-    answer === "no" ? "bg-selectedNo text-white" : "bg-no text-white"
-  } px-4 py-2 rounded`}
-  onClick={() => setAnswer("no")}
->
-  NO
-</Button>
