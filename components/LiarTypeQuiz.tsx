@@ -60,13 +60,13 @@ export default function LiarTypeQuiz() {
             <p className="mb-4 font-semibold">Q{i + 1}. {text}</p>
             <div className="flex gap-4">
               <Button
-                className={`w-full ${answers[i] === "1" ? "bg-blue-400" : "bg-blue-600 hover:bg-blue-700"}`}
+                className={`w-full ${answers[i] === "1" ? "bg-blue-300" : "bg-blue-600 hover:bg-blue-700"}`}
                 onClick={() => handleChange(i, "1")}
               >
                 YES
               </Button>
               <Button
-                className={`w-full ${answers[i] === "0" ? "bg-red-400" : "bg-red-600 hover:bg-red-700"}`}
+                className={`w-full ${answers[i] === "0" ? "bg-red-300" : "bg-red-600 hover:bg-red-700"}`}
                 onClick={() => handleChange(i, "0")}
               >
                 NO
