@@ -59,18 +59,18 @@ export default function LiarTypeQuiz() {
           <CardContent>
             <p className="mb-4 font-semibold">Q{i + 1}. {text}</p>
             <div className="flex gap-4">
-              <Button
-                className={`w-full ${answers[i] === "1" ? "bg-blue-300" : "bg-blue-600 hover:bg-blue-700"}`}
+              <button
+                className={`w-full px-4 py-2 rounded-xl font-medium transition-colors duration-200 ${answers[i] === "1" ? "bg-blue-400 text-white" : "bg-blue-600 hover:bg-blue-700 text-white"}`}
                 onClick={() => handleChange(i, "1")}
               >
                 YES
-              </Button>
-              <Button
-                className={`w-full ${answers[i] === "0" ? "bg-red-300" : "bg-red-600 hover:bg-red-700"}`}
+              </button>
+              <button
+                className={`w-full px-4 py-2 rounded-xl font-medium transition-colors duration-200 ${answers[i] === "0" ? "bg-red-400 text-white" : "bg-red-600 hover:bg-red-700 text-white"}`}
                 onClick={() => handleChange(i, "0")}
               >
                 NO
-              </Button>
+              </button>
             </div>
           </CardContent>
         </Card>
