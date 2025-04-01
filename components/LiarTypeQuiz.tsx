@@ -60,16 +60,14 @@ export default function LiarTypeQuiz() {
             <p className="mb-4 font-semibold">Q{i + 1}. {text}</p>
             <div className="flex gap-4">
               <Button
-                className={`w-full bg-blue-600 hover:bg-blue-700`}
+                className={`w-full ${answers[i] === "1" ? "bg-blue-400" : "bg-blue-600 hover:bg-blue-700"}`}
                 onClick={() => handleChange(i, "1")}
-                variant={answers[i] === "1" ? "default" : "outline"}
               >
                 YES
               </Button>
               <Button
-                className={`w-full bg-red-600 hover:bg-red-700`}
+                className={`w-full ${answers[i] === "0" ? "bg-red-400" : "bg-red-600 hover:bg-red-700"}`}
                 onClick={() => handleChange(i, "0")}
-                variant={answers[i] === "0" ? "default" : "outline"}
               >
                 NO
               </Button>
@@ -78,9 +76,7 @@ export default function LiarTypeQuiz() {
         </Card>
       ))}
 
-      <Button className="w-full mt-4 bg-green-600 hover:bg-green-700" onClick={handleSubmit} disabled={answers.includes("")}>
-        🧠 診断する！
-      </Button>
+      <Button className="w-full mt-4 bg-green-600 hover:bg-green-700" onClick={handleSubmit} disabled={answers.includes("")}>🧠 診断する！</Button>
 
       {result && (
         <div className="mt-8 p-6 bg-gray-800 rounded-xl shadow-lg text-center">
