@@ -17,3 +17,7 @@
     "typescript": "^4.9.5"
   }
 }
+"devDependencies": {
+  "@types/react": "^18.2.37",
+  "@types/node": "^20.11.19"
+}
