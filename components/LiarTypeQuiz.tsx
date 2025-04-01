@@ -20,7 +20,8 @@ const reactions = {
 export default function LiarTypeQuiz() {
   const [q1, setQ1] = useState("");
   const [q2, setQ2] = useState("");
-  const [result, setResult] = useState(null);
+  const [result, setResult] = useState<{ type: string; reaction: string; notice: string } | null>(null);
+
 
   const handleSubmit = () => {
     if (q1 && q2) {
